@@ -1,0 +1,13 @@
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.LabManager\bin\Debug\net8.0\NMBDHL.LabManager.deps.json
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.LabManager\bin\Debug\net8.0\NMBDHL.LabManager.dll
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.LabManager\bin\Debug\net8.0\NMBDHL.LabManager.pdb
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.LabManager\obj\Debug\net8.0\NMBDHL.LabManager.csproj.AssemblyReference.cache
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.LabManager\obj\Debug\net8.0\NMBDHL.LabManager.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.LabManager\obj\Debug\net8.0\NMBDHL.LabManager.AssemblyInfoInputs.cache
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.LabManager\obj\Debug\net8.0\NMBDHL.LabManager.AssemblyInfo.cs
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.LabManager\obj\Debug\net8.0\NMBDHL.LabManager.csproj.CoreCompileInputs.cache
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.LabManager\obj\Debug\net8.0\NMBDHL.LabManager.dll
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.LabManager\obj\Debug\net8.0\refint\NMBDHL.LabManager.dll
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.LabManager\obj\Debug\net8.0\NMBDHL.LabManager.pdb
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.LabManager\obj\Debug\net8.0\ref\NMBDHL.LabManager.dll
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.LabManager\obj\Debug\net8.0\NMBDHL.L.68362C18.Up2Date

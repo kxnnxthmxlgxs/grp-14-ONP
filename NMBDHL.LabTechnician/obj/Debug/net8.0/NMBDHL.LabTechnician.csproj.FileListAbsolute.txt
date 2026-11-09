@@ -1,0 +1,13 @@
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.LabTechnician\bin\Debug\net8.0\NMBDHL.LabTechnician.deps.json
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.LabTechnician\bin\Debug\net8.0\NMBDHL.LabTechnician.dll
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.LabTechnician\bin\Debug\net8.0\NMBDHL.LabTechnician.pdb
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.LabTechnician\obj\Debug\net8.0\NMBDHL.LabTechnician.csproj.AssemblyReference.cache
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.LabTechnician\obj\Debug\net8.0\NMBDHL.LabTechnician.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.LabTechnician\obj\Debug\net8.0\NMBDHL.LabTechnician.AssemblyInfoInputs.cache
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.LabTechnician\obj\Debug\net8.0\NMBDHL.LabTechnician.AssemblyInfo.cs
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.LabTechnician\obj\Debug\net8.0\NMBDHL.LabTechnician.csproj.CoreCompileInputs.cache
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.LabTechnician\obj\Debug\net8.0\NMBDHL.LabTechnician.dll
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.LabTechnician\obj\Debug\net8.0\refint\NMBDHL.LabTechnician.dll
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.LabTechnician\obj\Debug\net8.0\NMBDHL.LabTechnician.pdb
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.LabTechnician\obj\Debug\net8.0\ref\NMBDHL.LabTechnician.dll
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.LabTechnician\obj\Debug\net8.0\NMBDHL.L.02964193.Up2Date
