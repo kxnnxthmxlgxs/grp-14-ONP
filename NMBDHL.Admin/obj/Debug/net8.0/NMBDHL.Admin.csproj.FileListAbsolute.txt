@@ -1,0 +1,13 @@
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.Admin\bin\Debug\net8.0\NMBDHL.Admin.deps.json
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.Admin\bin\Debug\net8.0\NMBDHL.Admin.dll
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.Admin\bin\Debug\net8.0\NMBDHL.Admin.pdb
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.Admin\obj\Debug\net8.0\NMBDHL.Admin.csproj.AssemblyReference.cache
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.Admin\obj\Debug\net8.0\NMBDHL.Admin.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.Admin\obj\Debug\net8.0\NMBDHL.Admin.AssemblyInfoInputs.cache
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.Admin\obj\Debug\net8.0\NMBDHL.Admin.AssemblyInfo.cs
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.Admin\obj\Debug\net8.0\NMBDHL.Admin.csproj.CoreCompileInputs.cache
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.Admin\obj\Debug\net8.0\NMBDHL.Admin.dll
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.Admin\obj\Debug\net8.0\refint\NMBDHL.Admin.dll
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.Admin\obj\Debug\net8.0\NMBDHL.Admin.pdb
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.Admin\obj\Debug\net8.0\ref\NMBDHL.Admin.dll
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.Admin\obj\Debug\net8.0\NMBDHL.A.150C63C7.Up2Date
