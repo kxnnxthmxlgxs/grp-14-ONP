@@ -1,0 +1,1450 @@
+﻿@model NMBDHL.Auth.Model.Login
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <style>
+            html, body {
+                min-height: 100%;
+                margin: 0;
+                background-color: #071D37;
+                font-family: Arial, sans-serif;
+            }
+
+            body {
+                min-height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 30px 15px;
+                box-sizing: border-box;
+            }
+
+            .top-left-nav {
+                position: fixed;
+                top: 20px;
+                left: 20px;
+                z-index: 10;
+            }
+
+            .nav-icon-group {
+                display: flex;
+                gap: 12px;
+                align-items: center;
+                padding: 10px 14px;
+                border: 2px solid white;
+                border-radius: 12px;
+                text-decoration: none;
+                color: white;
+            }
+
+                .nav-icon-group:hover {
+                    background: rgba(255,255,255,0.1);
+                    color: white;
+                }
+
+            .login-card {
+                width: 900px;
+                max-width: 100%;
+                min-height: 550px;
+                display: flex;
+                border-radius: 24px;
+                overflow: hidden;
+                background: white;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            }
+
+            .login-left {
+                width: 50%;
+                background-image: url('@Url.Content("~/pictures/logo.png")');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-color: #f5f7fa;
+            }
+
+            .login-right {
+                width: 50%;
+                padding: 45px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .login-title {
+                font-weight: 700;
+                color: #071D37;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            .form-label {
+                color: #071D37;
+                font-weight: 600;
+            }
+
+            .form-control,
+            .form-select {
+                min-height: 44px;
+            }
+
+            .btn-primary {
+                background-color: #071D37;
+                border-color: #071D37;
+            }
+
+                .btn-primary:hover {
+                    background-color: #12365e;
+                    border-color: #12365e;
+                }
+
+            .register-link {
+                color: #0d6efd;
+                font-weight: 600;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+                .register-link:hover {
+                    text-decoration: underline;
+                }
+
+            .modal-overlay {
+                display: none;
+                position: fixed;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.65);
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+                z-index: 1000;
+                overflow-y: auto;
+            }
+
+            .modal-box {
+                width: 95%;
+                max-width: 1050px;
+                max-height: 90vh;
+                overflow-y: auto;
+                padding: 35px 45px;
+                background: #fff;
+                border-radius: 16px;
+                box-shadow: 0 10px 35px rgba(0,0,0,0.25);
+                box-sizing: border-box;
+                margin: auto;
+            }
+
+                .modal-box h5 {
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                    color: #071D37;
+                }
+
+                .modal-box .row {
+                    --bs-gutter-x: 32px;
+                    --bs-gutter-y: 8px;
+                }
+
+                .modal-box .form-label {
+                    display: block;
+                    margin-bottom: 7px;
+                    font-weight: 600;
+                }
+
+                .modal-box .form-control,
+                .modal-box .form-select {
+                    min-height: 46px;
+                    padding: 10px 13px;
+                    border-radius: 7px;
+                }
+
+                .modal-box .btn-primary {
+                    min-height: 46px;
+                    margin-top: 10px;
+                }
+
+            .validation-message {
+                display: block;
+                min-height: 18px;
+                margin-top: 5px;
+                font-size: 0.82rem;
+            }
+
+            .form-control.is-valid,
+            .form-select.is-valid {
+                border-color: #198754;
+                background-color: #f8fff9;
+            }
+
+            .form-control.is-invalid,
+            .form-select.is-invalid {
+                border-color: #dc3545;
+                background-color: #fffafa;
+            }
+
+            .validation-message.valid {
+                color: #198754;
+            }
+
+            .validation-message.invalid {
+                color: #dc3545;
+            }
+
+            .address-note {
+                color: #6c757d;
+                font-size: 0.82rem;
+                margin-top: 4px;
+            }
+
+            @@media (max-width: 700px) {
+                body {
+                    padding: 80px 12px 20px;
+                }
+
+                .login-card {
+                    width: 450px;
+                    min-height: auto;
+                }
+
+                .login-left {
+                    display: none;
+                }
+
+                .login-right {
+                    width: 100%;
+                    padding: 35px 25px;
+                }
+
+                .modal-overlay {
+                    padding: 10px;
+                    align-items: flex-start;
+                }
+
+                .modal-box {
+                    width: 100%;
+                    max-width: 100%;
+                    max-height: 95vh;
+                    padding: 24px 20px;
+                }
+
+                    .modal-box .row {
+                        --bs-gutter-x: 16px;
+                    }
+            }
+    </style>
+</head>
+
+<body>
+
+    <!-- HOME NAVIGATION -->
+    <div class="top-left-nav">
+        <a asp-controller="Home" asp-action="Index" class="nav-icon-group">
+            <i class="fa-solid fa-arrow-left"></i>
+            <i class="fa-solid fa-house"></i>
+        </a>
+    </div>
+
+    <!-- LOGIN CARD -->
+    <div class="login-card">
+        <div class="login-left"></div>
+
+        <div class="login-right">
+            <h2 class="login-title">Login</h2>
+
+            @if (TempData["RegistrationSuccess"] != null)
+            {
+                <div class="alert alert-success" role="alert">
+                    @TempData["RegistrationSuccess"]
+                </div>
+            }
+
+            <form asp-controller="Home" asp-action="Login" method="post">
+                @Html.AntiForgeryToken()
+
+                <input type="hidden" name="ReturnUrl" value="@Model?.ReturnUrl" />
+
+                @if (ViewBag.Message != null)
+                {
+                    <div class="alert alert-danger" role="alert">
+                        @ViewBag.Message
+                    </div>
+                }
+
+                <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
+                <div class="mb-3">
+                    <label asp-for="Email" class="form-label">Email</label>
+                    <input asp-for="Email"
+                           type="email"
+                           class="form-control"
+                           placeholder="Enter your email address"
+                           autocomplete="username"
+                           required />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Password" class="form-label">Password</label>
+
+                    <div class="input-group">
+                        <input asp-for="Password"
+                               type="password"
+                               class="form-control"
+                               id="passwordInput"
+                               placeholder="Enter your password"
+                               autocomplete="current-password"
+                               required />
+
+                        <button class="btn btn-outline-secondary"
+                                type="button"
+                                onclick="togglePassword()"
+                                aria-label="Show or hide password">
+                            <i class="fa-solid fa-eye" id="eyeIcon"></i>
+                        </button>
+                    </div>
+
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+
+                <div class="form-check mb-3">
+                    <input asp-for="RememberLogin" class="form-check-input" />
+                    <label asp-for="RememberLogin" class="form-check-label">
+                        Remember me
+                    </label>
+                </div>
+
+                <div class="d-flex justify-content-center mt-3">
+                    <button type="submit" class="btn btn-primary px-5">
+                        <i class="fa-solid fa-right-to-bracket"></i> Login
+                    </button>
+                </div>
+
+                <div class="text-center mt-3">
+                    <button type="button"
+                            class="register-link btn btn-link p-0"
+                            onclick="openRegisterModal()">
+                        <i class="fa-solid fa-person-circle-plus"></i> Register
+                    </button>
+                </div>
+
+                <div class="text-center mt-3">
+                    <button type="button"
+                            class="register-link btn btn-link p-0"
+                            onclick="openForgotModal()">
+                        <i class="fa-solid fa-circle-question"></i> Forgot Password?
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- PATIENT REGISTRATION MODAL -->
+    <div id="registerModal" class="modal-overlay">
+        <div class="modal-box">
+
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <h5 class="mb-1">Patient Registration</h5>
+                    <small class="text-muted">Enter the patient's details below.</small>
+                </div>
+
+                <button type="button"
+                        class="btn-close"
+                        onclick="closeRegisterModal()"
+                        aria-label="Close"></button>
+            </div>
+
+            <form id="registerForm"
+                  asp-controller="Home"
+                  asp-action="RegisterPatient"
+                  method="post">
+                @Html.AntiForgeryToken()
+
+                @if (ViewBag.RegisterMessage != null)
+                {
+                    <div class="alert alert-danger" role="alert">
+                        @ViewBag.RegisterMessage
+                    </div>
+                }
+
+                <div class="row">
+
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label" for="regName">Name</label>
+                        <input type="text"
+                               id="regName"
+                               name="Name"
+                               class="form-control"
+                               minlength="2"
+                               maxlength="100"
+                               autocomplete="given-name"
+                               data-validation="name"
+                               required />
+                        <small class="validation-message"></small>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label" for="regSurname">Surname</label>
+                        <input type="text"
+                               id="regSurname"
+                               name="Surname"
+                               class="form-control"
+                               minlength="2"
+                               maxlength="100"
+                               autocomplete="family-name"
+                               data-validation="name"
+                               required />
+                        <small class="validation-message"></small>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label" for="IDNumber">
+                            South African ID Number
+                        </label>
+                        <input type="text"
+                               id="IDNumber"
+                               name="IDNumber"
+                               class="form-control"
+                               maxlength="13"
+                               minlength="13"
+                               inputmode="numeric"
+                               pattern="[0-9]{13}"
+                               data-validation="id"
+                               autocomplete="off"
+                               required />
+                        <small class="validation-message"></small>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label" for="DateOfBirth">Date of Birth</label>
+                        <input type="date"
+                               id="DateOfBirth"
+                               name="DateOfBirth"
+                               class="form-control"
+                               autocomplete="bday"
+                               data-validation="dob"
+                               readonly
+                               required />
+                        <small class="validation-message"></small>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label" for="Cellphone">Cellphone Number</label>
+                        <input type="tel"
+                               id="Cellphone"
+                               name="Cellphone"
+                               class="form-control"
+                               placeholder="e.g. 0821234567"
+                               maxlength="12"
+                               autocomplete="tel"
+                               data-validation="phone"
+                               required />
+                        <small class="validation-message"></small>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label" for="regEmail">Email (Username)</label>
+                        <input type="email"
+                               id="regEmail"
+                               name="Email"
+                               class="form-control"
+                               maxlength="254"
+                               autocomplete="email"
+                               data-validation="email"
+                               required />
+                        <small class="validation-message"></small>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label" for="StreetAddress">Street Address</label>
+                        <input type="text"
+                               id="StreetAddress"
+                               name="StreetAddress"
+                               class="form-control"
+                               placeholder="House number and street"
+                               maxlength="200"
+                               autocomplete="address-line1"
+                               data-validation="required"
+                               required />
+                        <small class="validation-message"></small>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label" for="Province">Province</label>
+                        <select id="Province"
+                                name="Province"
+                                class="form-select"
+                                autocomplete="address-level1"
+                                data-validation="address"
+                                required>
+                            <option value="">Select Province</option>
+                        </select>
+                        <small class="validation-message"></small>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label" for="City">City / Town</label>
+                        <select id="City"
+                                name="City"
+                                class="form-select"
+                                autocomplete="address-level2"
+                                data-validation="address"
+                                disabled
+                                required>
+                            <option value="">Select City / Town</option>
+                        </select>
+                        <small class="validation-message"></small>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label" for="Suburb">Suburb</label>
+                        <select id="Suburb"
+                                name="Suburb"
+                                class="form-select"
+                                autocomplete="address-level3"
+                                data-validation="address"
+                                disabled
+                                required>
+                            <option value="">Select Suburb</option>
+                        </select>
+                        <small class="validation-message"></small>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label" for="PostalCode">Postal Code</label>
+                        <input type="text"
+                               id="PostalCode"
+                               name="PostalCode"
+                               class="form-control"
+                               maxlength="4"
+                               minlength="4"
+                               inputmode="numeric"
+                               pattern="[0-9]{4}"
+                               autocomplete="postal-code"
+                               data-validation="postal"
+                               readonly
+                               required />
+                        <small class="validation-message"></small>
+                        <div class="address-note">
+                            Automatically populated from the selected suburb.
+                        </div>
+                    </div>
+
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">
+                    <i class="fa-solid fa-user-plus"></i> Register Patient
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- FORGOT PASSWORD: SEARCH EMAIL -->
+    <div id="forgotModal" class="modal-overlay">
+        <div class="modal-box" style="max-width: 550px;">
+
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="mb-0">Forgot Password</h5>
+
+                <button type="button"
+                        class="btn-close"
+                        onclick="closeForgotModal()"
+                        aria-label="Close"></button>
+            </div>
+
+            <p>Enter the email address registered to your account.</p>
+
+            <form asp-controller="Home"
+                  asp-action="FindUserByEmail"
+                  method="post">
+                @Html.AntiForgeryToken()
+
+                <div class="mb-3">
+                    <label class="form-label" for="searchEmail">Email Address</label>
+                    <input type="email"
+                           id="searchEmail"
+                           name="Email"
+                           class="form-control"
+                           value="@Model?.Email"
+                           placeholder="Enter your email"
+                           required />
+                </div>
+
+                @if (ViewBag.ForgotMessage != null)
+                {
+                    <div class="text-danger small mb-3" role="alert">
+                        @ViewBag.ForgotMessage
+                    </div>
+                }
+
+                <button type="submit" class="btn btn-primary w-100">
+                    <i class="fa-solid fa-magnifying-glass"></i> Search
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- SEND PASSWORD RESET LINK -->
+    <div id="sendLinkModal" class="modal-overlay">
+        <div class="modal-box" style="max-width: 550px;">
+
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="mb-0">Send Password Reset Link</h5>
+
+                <button type="button"
+                        class="btn-close"
+                        onclick="closeSendLinkModal()"
+                        aria-label="Close"></button>
+            </div>
+
+            <p>A password-reset link will be sent to this registered email address.</p>
+
+            <form asp-controller="Home"
+                  asp-action="ForgotPassword"
+                  method="post">
+                @Html.AntiForgeryToken()
+
+                <div class="mb-3">
+                    <label class="form-label" for="registeredEmail">Registered Email</label>
+                    <input type="email"
+                           id="registeredEmail"
+                           name="Email"
+                           class="form-control"
+                           value="@ViewBag.RegisteredEmail"
+                           readonly
+                           required />
+                </div>
+
+                @if (ViewBag.SendLinkMessage != null)
+                {
+                    <div class="text-danger small mb-3" role="alert">
+                        @ViewBag.SendLinkMessage
+                    </div>
+                }
+
+                <button type="submit" class="btn btn-primary w-100">
+                    <i class="fa-solid fa-envelope"></i> Send Link to Email
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+            // =========================================================
+            // ADDRESS DATA
+            // Province -> City/Town -> Suburb -> street and box postal codes
+            // =========================================================
+
+            const addressData = {
+                "Eastern Cape": {
+                    "Gqeberha": {
+                        "Central": { street: "6001", box: "6000" },
+                        "Summerstrand": { street: "6001", box: "6019" },
+                        "Walmer": { street: "6070", box: "6065" },
+                        "Newton Park": { street: "6045", box: "6055" },
+                        "Humewood": { street: "6013", box: "6013" },
+                        "Mount Croix": { street: "6001", box: "6001" },
+                        "Lorraine": { street: "6070", box: "6070" },
+                        "Mill Park": { street: "6001", box: "6001" },
+                        "KwaDwesi": { street: "6059", box: "6059" },
+                        "Motherwell": { street: "6211", box: "6211" },
+                        "Kwadwesi NU": { street: "6059", box: "6059" },
+                        "Korsten": { street: "6020", box: "6020" },
+                        "Despatch": { street: "6220", box: "6220" },
+                        "Kariega": { street: "6229", box: "6229" }
+                    },
+                    "East London": {
+                        "Southernwood": { street: "5201", box: "5201" },
+                        "Beacon Bay": { street: "5241", box: "5241" },
+                        "Vincent": { street: "5247", box: "5247" },
+                        "Nahoon": { street: "5241", box: "5241" },
+                        "Cambridge": { street: "5206", box: "5206" },
+                        "Mdantsane": { street: "5219", box: "5219" }
+                    },
+                    "Mthatha": {
+                        "Mthatha Central": { street: "5100", box: "5099" },
+                        "Northcrest": { street: "5099", box: "5099" }
+                    },
+                    "Komani": {
+                        "Komani Central": { street: "5320", box: "5320" }
+                    },
+                    "Makhanda": {
+                        "Makhanda Central": { street: "6139", box: "6140" }
+                    },
+                    "Bhisho": {
+                        "Bhisho Central": { street: "5605", box: "5605" }
+                    },
+                    "Jeffreys Bay": {
+                        "Jeffreys Bay Central": { street: "6330", box: "6330" }
+                    },
+                    "Port Alfred": {
+                        "Port Alfred Central": { street: "6170", box: "6170" }
+                    },
+                    "Graaff-Reinet": {
+                        "Graaff-Reinet Central": { street: "6280", box: "6280" }
+                    }
+                },
+
+                "Free State": {
+                    "Bloemfontein": {
+                        "Westdene": { street: "9301", box: "9301" },
+                        "Universitas": { street: "9301", box: "9301" },
+                        "Langenhoven Park": { street: "9330", box: "9300" },
+                        "Bayswater": { street: "9301", box: "9301" },
+                        "Fichardt Park": { street: "9317", box: "9317" },
+                        "Heidedal": { street: "9306", box: "9306" }
+                    },
+                    "Welkom": {
+                        "Welkom Central": { street: "9460", box: "9460" },
+                        "Riebeeckstad": { street: "9469", box: "9460" },
+                        "Thabong": { street: "9463", box: "9463" }
+                    },
+                    "Bethlehem": {
+                        "Bethlehem Central": { street: "9701", box: "9700" }
+                    },
+                    "Kroonstad": {
+                        "Kroonstad Central": { street: "9500", box: "9500" }
+                    },
+                    "Sasolburg": {
+                        "Sasolburg Central": { street: "1947", box: "1947" }
+                    },
+                    "Phuthaditjhaba": {
+                        "Phuthaditjhaba Central": { street: "9866", box: "9866" }
+                    }
+                },
+
+                "Gauteng": {
+                    "Johannesburg": {
+                        "Sandton": { street: "2196", box: "2146" },
+                        "Randburg": { street: "2194", box: "2125" },
+                        "Roodepoort": { street: "1724", box: "1725" },
+                        "Soweto": { street: "1804", box: "1868" },
+                        "Midrand": { street: "1685", box: "1685" },
+                        "Fourways": { street: "2055", box: "2055" },
+                        "Rosebank": { street: "2196", box: "2132" },
+                        "Melville": { street: "2092", box: "2109" },
+                        "Braamfontein": { street: "2001", box: "2017" },
+                        "Florida": { street: "1709", box: "1710" },
+                        "Lenasia": { street: "1820", box: "1820" }
+                    },
+                    "Pretoria": {
+                        "Hatfield": { street: "0028", box: "0028" },
+                        "Brooklyn": { street: "0181", box: "0181" },
+                        "Arcadia": { street: "0083", box: "0083" },
+                        "Centurion": { street: "0157", box: "0046" },
+                        "Menlyn": { street: "0063", box: "0063" },
+                        "Sunnyside": { street: "0002", box: "0002" },
+                        "Mamelodi": { street: "0122", box: "0122" },
+                        "Silverton": { street: "0184", box: "0127" }
+                    },
+                    "Ekurhuleni": {
+                        "Benoni": { street: "1501", box: "1500" },
+                        "Boksburg": { street: "1459", box: "1460" },
+                        "Kempton Park": { street: "1619", box: "1620" },
+                        "Springs": { street: "1559", box: "1560" },
+                        "Germiston": { street: "1401", box: "1400" },
+                        "Alberton": { street: "1449", box: "1450" },
+                        "Brakpan": { street: "1540", box: "1540" }
+                    },
+                    "Vanderbijlpark": {
+                        "Vanderbijlpark Central": { street: "1911", box: "1900" }
+                    },
+                    "Krugersdorp": {
+                        "Krugersdorp Central": { street: "1740", box: "1740" }
+                    }
+                },
+
+                "KwaZulu-Natal": {
+                    "Durban": {
+                        "Durban Central": { street: "4001", box: "4000" },
+                        "Berea": { street: "4001", box: "4001" },
+                        "Umhlanga": { street: "4320", box: "4320" },
+                        "Westville": { street: "3630", box: "3630" },
+                        "Pinetown": { street: "3610", box: "3600" },
+                        "Chatsworth": { street: "4092", box: "4030" },
+                        "Phoenix": { street: "4068", box: "4068" },
+                        "Umlazi": { street: "4066", box: "4031" },
+                        "Bluff": { street: "4052", box: "4052" },
+                        "Hillcrest": { street: "3650", box: "3650" },
+                        "Newlands East": { street: "4037", box: "4037" }
+                    },
+                    "Pietermaritzburg": {
+                        "Scottsville": { street: "3209", box: "3209" },
+                        "Pietermaritzburg Central": { street: "3201", box: "3200" },
+                        "Hayfields": { street: "3201", box: "3201" }
+                    },
+                    "Newcastle": {
+                        "Newcastle Central": { street: "2940", box: "2940" }
+                    },
+                    "Richards Bay": {
+                        "Richards Bay Central": { street: "3900", box: "3900" }
+                    },
+                    "Ladysmith": {
+                        "Ladysmith Central": { street: "3370", box: "3370" }
+                    },
+                    "Port Shepstone": {
+                        "Port Shepstone Central": { street: "4240", box: "4240" }
+                    },
+                    "Ballito": {
+                        "Ballito Central": { street: "4420", box: "4420" }
+                    }
+                },
+
+                "Limpopo": {
+                    "Polokwane": {
+                        "Polokwane Central": { street: "0700", box: "0700" },
+                        "Bendor": { street: "0699", box: "0700" },
+                        "Flora Park": { street: "0699", box: "0700" }
+                    },
+                    "Tzaneen": {
+                        "Tzaneen Central": { street: "0850", box: "0850" }
+                    },
+                    "Thohoyandou": {
+                        "Thohoyandou Central": { street: "0950", box: "0950" }
+                    },
+                    "Mokopane": {
+                        "Mokopane Central": { street: "0600", box: "0600" }
+                    },
+                    "Musina": {
+                        "Musina Central": { street: "0900", box: "0900" }
+                    },
+                    "Lephalale": {
+                        "Lephalale Central": { street: "0555", box: "0555" }
+                    },
+                    "Giyani": {
+                        "Giyani Central": { street: "0826", box: "0826" }
+                    }
+                },
+
+                "Mpumalanga": {
+                    "Mbombela": {
+                        "Mbombela Central": { street: "1200", box: "1200" },
+                        "West Acres": { street: "1211", box: "1200" },
+                        "Sonheuwel": { street: "1201", box: "1200" }
+                    },
+                    "Secunda": {
+                        "Secunda Central": { street: "2302", box: "2302" }
+                    },
+                    "eMalahleni": {
+                        "eMalahleni Central": { street: "1035", box: "1035" }
+                    },
+                    "Middelburg": {
+                        "Middelburg Central": { street: "1050", box: "1050" }
+                    },
+                    "Ermelo": {
+                        "Ermelo Central": { street: "2350", box: "2350" }
+                    },
+                    "Standerton": {
+                        "Standerton Central": { street: "2430", box: "2430" }
+                    },
+                    "White River": {
+                        "White River Central": { street: "1240", box: "1240" }
+                    }
+                },
+
+                "Northern Cape": {
+                    "Kimberley": {
+                        "Kimberley Central": { street: "8301", box: "8300" },
+                        "Beaconsfield": { street: "8301", box: "8301" },
+                        "Monument Heights": { street: "8301", box: "8301" }
+                    },
+                    "Upington": {
+                        "Upington Central": { street: "8801", box: "8800" }
+                    },
+                    "Kuruman": {
+                        "Kuruman Central": { street: "8460", box: "8460" }
+                    },
+                    "De Aar": {
+                        "De Aar Central": { street: "7000", box: "7000" }
+                    },
+                    "Springbok": {
+                        "Springbok Central": { street: "8240", box: "8240" }
+                    }
+                },
+
+                "North West": {
+                    "Rustenburg": {
+                        "Rustenburg Central": { street: "0300", box: "0300" },
+                        "Safari Gardens": { street: "0299", box: "0300" },
+                        "Waterfall East": { street: "0299", box: "0300" }
+                    },
+                    "Mahikeng": {
+                        "Mahikeng Central": { street: "2745", box: "2745" }
+                    },
+                    "Potchefstroom": {
+                        "Potchefstroom Central": { street: "2531", box: "2520" }
+                    },
+                    "Klerksdorp": {
+                        "Klerksdorp Central": { street: "2571", box: "2570" }
+                    },
+                    "Brits": {
+                        "Brits Central": { street: "0250", box: "0250" }
+                    },
+                    "Vryburg": {
+                        "Vryburg Central": { street: "8600", box: "8600" }
+                    }
+                },
+
+                "Western Cape": {
+                    "Cape Town": {
+                        "Bellville": { street: "7530", box: "7535" },
+                        "Goodwood": { street: "7460", box: "7460" },
+                        "Claremont": { street: "7708", box: "7735" },
+                        "Sea Point": { street: "8005", box: "8060" },
+                        "Mitchells Plain": { street: "7785", box: "7789" },
+                        "Khayelitsha": { street: "7784", box: "7784" },
+                        "Parow": { street: "7500", box: "7499" },
+                        "Rondebosch": { street: "7700", box: "7701" },
+                        "Wynberg": { street: "7800", box: "7824" },
+                        "Observatory": { street: "7925", box: "7935" },
+                        "Table View": { street: "7441", box: "7439" },
+                        "Milnerton": { street: "7441", box: "7435" },
+                        "Kenilworth": { street: "7708", box: "7745" }
+                    },
+                    "Stellenbosch": {
+                        "Stellenbosch Central": { street: "7600", box: "7599" },
+                        "Die Boord": { street: "7600", box: "7600" }
+                    },
+                    "George": {
+                        "George Central": { street: "6530", box: "6530" }
+                    },
+                    "Paarl": {
+                        "Paarl Central": { street: "7646", box: "7620" }
+                    },
+                    "Worcester": {
+                        "Worcester Central": { street: "6850", box: "6850" }
+                    },
+                    "Mossel Bay": {
+                        "Mossel Bay Central": { street: "6500", box: "6500" }
+                    },
+                    "Knysna": {
+                        "Knysna Central": { street: "6570", box: "6570" }
+                    },
+                    "Hermanus": {
+                        "Hermanus Central": { street: "7200", box: "7200" }
+                    }
+                }
+            };
+
+            // =========================================================
+            // PASSWORD VISIBILITY
+            // =========================================================
+
+            function togglePassword() {
+                const input = document.getElementById("passwordInput");
+                const icon = document.getElementById("eyeIcon");
+
+                if (input.type === "password") {
+                    input.type = "text";
+                    icon.classList.replace("fa-eye", "fa-eye-slash");
+                } else {
+                    input.type = "password";
+                    icon.classList.replace("fa-eye-slash", "fa-eye");
+                }
+            }
+
+            // =========================================================
+            // MODAL CONTROLS
+            // =========================================================
+
+            function openRegisterModal() {
+                document.getElementById("registerModal").style.display = "flex";
+            }
+
+            function closeRegisterModal() {
+                document.getElementById("registerModal").style.display = "none";
+            }
+
+            function openForgotModal() {
+                document.getElementById("forgotModal").style.display = "flex";
+            }
+
+            function closeForgotModal() {
+                document.getElementById("forgotModal").style.display = "none";
+            }
+
+            function closeSendLinkModal() {
+                document.getElementById("sendLinkModal").style.display = "none";
+            }
+
+            document.querySelectorAll(".modal-overlay").forEach(function(overlay) {
+                overlay.addEventListener("click", function(event) {
+                    if (event.target === overlay) {
+                        overlay.style.display = "none";
+                    }
+                });
+            });
+
+            document.addEventListener("keydown", function(event) {
+                if (event.key === "Escape") {
+                    closeRegisterModal();
+                    closeForgotModal();
+                    closeSendLinkModal();
+                }
+            });
+
+            // =========================================================
+            // CASCADING ADDRESS DROPDOWNS
+            // =========================================================
+
+            document.addEventListener("DOMContentLoaded", function() {
+                const provinceSelect = document.getElementById("Province");
+                const citySelect = document.getElementById("City");
+                const suburbSelect = document.getElementById("Suburb");
+                const postalCodeInput = document.getElementById("PostalCode");
+
+                if (!provinceSelect || !citySelect || !suburbSelect || !postalCodeInput) {
+                    return;
+                }
+
+                function setFieldResult(field, error) {
+                    const container = field.closest(".mb-3");
+                    const message = container
+                        ? container.querySelector(".validation-message")
+                        : null;
+
+                    field.classList.toggle("is-invalid", Boolean(error));
+                    field.classList.toggle(
+                        "is-valid",
+                        !error && field.value.trim() !== ""
+                    );
+
+                    if (message) {
+                        message.textContent = error ||
+                            (field.value.trim() ? "Looks good." : "");
+
+                        message.classList.toggle("invalid", Boolean(error));
+                        message.classList.toggle(
+                            "valid",
+                            !error && field.value.trim() !== ""
+                        );
+                    }
+                }
+
+                function resetSelect(select, placeholder) {
+                    select.replaceChildren();
+
+                    const option = document.createElement("option");
+                    option.value = "";
+                    option.textContent = placeholder;
+                    select.appendChild(option);
+
+                    select.disabled = true;
+                    select.classList.remove("is-valid", "is-invalid");
+
+                    const message = select.closest(".mb-3")
+                        ?.querySelector(".validation-message");
+
+                    if (message) {
+                        message.textContent = "";
+                        message.classList.remove("valid", "invalid");
+                    }
+                }
+
+                function addOption(select, value, label) {
+                    const option = document.createElement("option");
+                    option.value = value;
+                    option.textContent = label;
+                    select.appendChild(option);
+                }
+
+                Object.keys(addressData).sort().forEach(function(province) {
+                    addOption(provinceSelect, province, province);
+                });
+
+                provinceSelect.addEventListener("change", function() {
+                    resetSelect(citySelect, "Select City / Town");
+                    resetSelect(suburbSelect, "Select Suburb");
+                    postalCodeInput.value = "";
+
+                    const province = provinceSelect.value;
+
+                    if (!province || !addressData[province]) {
+                        validateAddressField(provinceSelect);
+                        return;
+                    }
+
+                    Object.keys(addressData[province]).sort().forEach(function(city) {
+                        addOption(citySelect, city, city);
+                    });
+
+                    citySelect.disabled = false;
+                    validateAddressField(provinceSelect);
+                });
+
+                citySelect.addEventListener("change", function() {
+                    resetSelect(suburbSelect, "Select Suburb");
+                    postalCodeInput.value = "";
+
+                    const province = provinceSelect.value;
+                    const city = citySelect.value;
+
+                    if (!province || !city || !addressData[province]?.[city]) {
+                        validateAddressField(citySelect);
+                        return;
+                    }
+
+                    Object.keys(addressData[province][city]).sort().forEach(function(suburb) {
+                        addOption(suburbSelect, suburb, suburb);
+                    });
+
+                    suburbSelect.disabled = false;
+                    validateAddressField(citySelect);
+                });
+
+                suburbSelect.addEventListener("change", function() {
+                    postalCodeInput.value = "";
+
+                    const province = provinceSelect.value;
+                    const city = citySelect.value;
+                    const suburb = suburbSelect.value;
+
+                    if (!province || !city || !suburb) {
+                        validateAddressField(suburbSelect);
+                        validateAddressField(postalCodeInput);
+                        return;
+                    }
+
+                    const address = addressData[province]?.[city]?.[suburb];
+
+                    if (address) {
+                        postalCodeInput.value = address.street;
+                    }
+
+                    validateAddressField(suburbSelect);
+                    validateAddressField(postalCodeInput);
+                });
+
+                function validateAddressField(field) {
+                    let error = "";
+
+                    if (!field.value) {
+                        error = "Please select an option.";
+                    } else if (field.id === "Province") {
+                        if (!addressData[field.value]) {
+                            error = "Select a valid configured province.";
+                        }
+                    } else if (field.id === "City") {
+                        const province = provinceSelect.value;
+
+                        if (!addressData[province]?.[field.value]) {
+                            error = "Select a valid city for the chosen province.";
+                        }
+                    } else if (field.id === "Suburb") {
+                        const province = provinceSelect.value;
+                        const city = citySelect.value;
+
+                        if (!addressData[province]?.[city]?.[field.value]) {
+                            error = "Select a valid suburb for the chosen city.";
+                        }
+                    } else if (field.id === "PostalCode") {
+                        const province = provinceSelect.value;
+                        const city = citySelect.value;
+                        const suburb = suburbSelect.value;
+                        const expected = addressData[province]?.[city]?.[suburb]?.street;
+
+                        if (!expected || field.value !== expected) {
+                            error = "Choose a suburb to populate its postal code.";
+                        }
+                    }
+
+                    setFieldResult(field, error);
+                    return !error;
+                }
+
+                window.validateAddressField = validateAddressField;
+            });
+
+            // =========================================================
+            // PATIENT REGISTRATION VALIDATION AND DOB AUTO-POPULATION
+            // =========================================================
+
+            document.addEventListener("DOMContentLoaded", function() {
+                const form = document.getElementById("registerForm");
+
+                if (!form) return;
+
+                const idField = document.getElementById("IDNumber");
+                const dobField = document.getElementById("DateOfBirth");
+                const fields = form.querySelectorAll("[data-validation]");
+
+                function showResult(field, error) {
+                    const container = field.closest(".mb-3");
+                    const message = container
+                        ? container.querySelector(".validation-message")
+                        : null;
+
+                    field.classList.toggle("is-invalid", Boolean(error));
+                    field.classList.toggle(
+                        "is-valid",
+                        !error && field.value.trim() !== ""
+                    );
+
+                    if (message) {
+                        message.textContent = error ||
+                            (field.value.trim() ? "Looks good." : "");
+
+                        message.classList.toggle("invalid", Boolean(error));
+                        message.classList.toggle(
+                            "valid",
+                            !error && field.value.trim() !== ""
+                        );
+                    }
+                }
+
+                function isValidLuhn(id) {
+                    let sum = 0;
+                    let doubleDigit = false;
+
+                    for (let i = id.length - 1; i >= 0; i--) {
+                        let digit = Number(id[i]);
+
+                        if (doubleDigit) {
+                            digit *= 2;
+                            if (digit > 9) digit -= 9;
+                        }
+
+                        sum += digit;
+                        doubleDigit = !doubleDigit;
+                    }
+
+                    return sum % 10 === 0;
+                }
+
+                function getDateFromID(id) {
+                    if (!/^\d{13}$/.test(id)) return null;
+
+                    const yearPart = Number(id.substring(0, 2));
+                    const month = Number(id.substring(2, 4));
+                    const day = Number(id.substring(4, 6));
+
+                    const currentYear = new Date().getFullYear() % 100;
+                    const year = yearPart <= currentYear
+                        ? 2000 + yearPart
+                        : 1900 + yearPart;
+
+                    const date = new Date(year, month - 1, day);
+                    const today = new Date();
+                    today.setHours(0, 0, 0, 0);
+
+                    if (
+                        date.getFullYear() !== year ||
+                        date.getMonth() !== month - 1 ||
+                        date.getDate() !== day ||
+                        date > today
+                    ) {
+                        return null;
+                    }
+
+                    return `${year}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+                }
+
+                function populateDateOfBirth() {
+                    const id = idField.value.trim();
+
+                    if (!/^\d{13}$/.test(id)) {
+                        dobField.value = "";
+                        showResult(dobField, "");
+                        return;
+                    }
+
+                    const dateOfBirth = getDateFromID(id);
+
+                    if (!dateOfBirth) {
+                        dobField.value = "";
+                        showResult(
+                            dobField,
+                            "The date encoded in this ID number is invalid."
+                        );
+                        return;
+                    }
+
+                    dobField.value = dateOfBirth;
+                    showResult(dobField, "");
+                }
+
+                function validateField(field) {
+                    const value = field.value.trim();
+                    const type = field.dataset.validation;
+                    let error = "";
+
+                    if (type === "address" || type === "postal") {
+                        if (typeof window.validateAddressField === "function") {
+                            return window.validateAddressField(field);
+                        }
+                    }
+
+                    if (!value) {
+                        if (field.required) {
+                            error = "This field is required.";
+                        }
+
+                        showResult(field, error);
+                        return !error;
+                    }
+
+                    switch (type) {
+                        case "name":
+                            if (!/^[A-Za-zÀ-ÖØ-öø-ÿ' -]{2,100}$/.test(value)) {
+                                error = "Enter at least 2 letters. Spaces, apostrophes and hyphens are allowed.";
+                            }
+                            break;
+
+                        case "id":
+                            if (!/^\d{13}$/.test(value)) {
+                                error = "The ID number must contain exactly 13 digits.";
+                            } else if (!getDateFromID(value)) {
+                                error = "The date encoded in this ID number is invalid.";
+                            } else if (!isValidLuhn(value)) {
+                                error = "The ID number checksum is invalid. Please check the number.";
+                            }
+                            break;
+
+                        case "dob": {
+                            const expectedDate = getDateFromID(idField.value.trim());
+
+                            if (!expectedDate) {
+                                error = "Enter a valid 13-digit ID number first.";
+                            } else if (value !== expectedDate) {
+                                error = "Date of birth must match the date encoded in the ID number.";
+                            }
+                            break;
+                        }
+
+                        case "phone":
+                            if (!/^(0[6-8]\d{8}|\+27[6-8]\d{8})$/.test(value)) {
+                                error = "Enter a valid South African mobile number, e.g. 0821234567.";
+                            }
+                            break;
+
+                        case "email": {
+                            const atSymbol = String.fromCharCode(64);
+                            const atIndex = value.indexOf(atSymbol);
+
+                            if (
+                                atIndex <= 0 ||
+                                atIndex !== value.lastIndexOf(atSymbol) ||
+                                atIndex === value.length - 1 ||
+                                value.includes(" ") ||
+                                !value.substring(atIndex + 1).includes(".") ||
+                                value.substring(atIndex + 1).startsWith(".") ||
+                                value.endsWith(".")
+                            ) {
+                                error = "Enter a valid email address.";
+                            }
+                            break;
+                        }
+
+                        case "required":
+                            if (!value) {
+                                error = "This field is required.";
+                            }
+                            break;
+                    }
+
+                    if (!error && field.validity.patternMismatch) {
+                        error = "Please enter a value in the required format.";
+                    }
+
+                    showResult(field, error);
+                    return !error;
+                }
+
+                // Populate Date of Birth when the ID is entered or pasted.
+                idField.addEventListener("input", function() {
+                    populateDateOfBirth();
+                    validateField(idField);
+
+                    if (dobField.value) {
+                        validateField(dobField);
+                    }
+                });
+
+                idField.addEventListener("change", function() {
+                    populateDateOfBirth();
+                    validateField(idField);
+
+                    if (dobField.value) {
+                        validateField(dobField);
+                    }
+                });
+
+                fields.forEach(function(field) {
+                    if (field.id === "IDNumber") return;
+
+                    field.addEventListener("input", function() {
+                        validateField(field);
+                    });
+
+                    field.addEventListener("change", function() {
+                        validateField(field);
+                    });
+
+                    field.addEventListener("blur", function() {
+                        validateField(field);
+                    });
+                });
+
+                form.addEventListener("submit", function(event) {
+                    populateDateOfBirth();
+
+                    let allValid = true;
+
+                    fields.forEach(function(field) {
+                        if (!validateField(field)) {
+                            allValid = false;
+                        }
+                    });
+
+                    if (!allValid || !form.checkValidity()) {
+                        event.preventDefault();
+                        form.reportValidity();
+                    }
+                });
+            });
+    </script>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    @if (ViewBag.ShowForgotModal == true)
+    {
+        <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    document.getElementById("forgotModal").style.display = "flex";
+                });
+        </script>
+    }
+
+    @if (ViewBag.ShowSendLinkModal == true)
+    {
+        <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    document.getElementById("sendLinkModal").style.display = "flex";
+                });
+        </script>
+    }
+
+    @if (ViewBag.ShowRegisterModal == true)
+    {
+        <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    document.getElementById("registerModal").style.display = "flex";
+                });
+        </script>
+    }
+
+</body>
+</html>
