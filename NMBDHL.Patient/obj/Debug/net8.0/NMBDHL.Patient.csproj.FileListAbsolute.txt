@@ -1,0 +1,15 @@
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.Patient\bin\Debug\net8.0\NMBDHL.Patient.deps.json
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.Patient\bin\Debug\net8.0\NMBDHL.Patient.dll
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.Patient\bin\Debug\net8.0\NMBDHL.Patient.pdb
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.Patient\obj\Debug\net8.0\NMBDHL.Patient.csproj.AssemblyReference.cache
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.Patient\obj\Debug\net8.0\NMBDHL.Patient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.Patient\obj\Debug\net8.0\NMBDHL.Patient.AssemblyInfoInputs.cache
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.Patient\obj\Debug\net8.0\NMBDHL.Patient.AssemblyInfo.cs
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.Patient\obj\Debug\net8.0\NMBDHL.Patient.csproj.CoreCompileInputs.cache
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.Patient\obj\Debug\net8.0\NMBDHL.Patient.dll
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.Patient\obj\Debug\net8.0\refint\NMBDHL.Patient.dll
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.Patient\obj\Debug\net8.0\NMBDHL.Patient.pdb
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.Patient\obj\Debug\net8.0\ref\NMBDHL.Patient.dll
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.Patient\obj\Debug\net8.0\NMBDHL.P.5F0C0C6B.Up2Date
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.Patient\bin\Debug\net8.0\NMBDHL.DataAccess.dll
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.Patient\bin\Debug\net8.0\NMBDHL.DataAccess.pdb

@@ -1,0 +1,13 @@
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.Services\bin\Debug\net8.0\NMBDHL.Services.deps.json
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.Services\bin\Debug\net8.0\NMBDHL.Services.dll
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.Services\bin\Debug\net8.0\NMBDHL.Services.pdb
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.Services\obj\Debug\net8.0\NMBDHL.Services.csproj.AssemblyReference.cache
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.Services\obj\Debug\net8.0\NMBDHL.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.Services\obj\Debug\net8.0\NMBDHL.Services.AssemblyInfoInputs.cache
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.Services\obj\Debug\net8.0\NMBDHL.Services.AssemblyInfo.cs
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.Services\obj\Debug\net8.0\NMBDHL.Services.csproj.CoreCompileInputs.cache
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.Services\obj\Debug\net8.0\NMBDHL.Services.dll
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.Services\obj\Debug\net8.0\refint\NMBDHL.Services.dll
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.Services\obj\Debug\net8.0\NMBDHL.Services.pdb
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.Services\obj\Debug\net8.0\ref\NMBDHL.Services.dll
+C:\Users\Kenneth Malgas\Desktop\GRP-04-14\NMBDHL.Services\obj\Debug\net8.0\NMBDHL.S.A263EEBA.Up2Date
