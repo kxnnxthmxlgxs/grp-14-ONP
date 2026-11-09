@@ -1,0 +1,801 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\WebApplication2\\WebApplication2.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.Admin\\NMBDHL.Admin.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.Admin\\NMBDHL.Admin.csproj",
+        "projectName": "NMBDHL.Admin",
+        "projectPath": "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.Admin\\NMBDHL.Admin.csproj",
+        "packagesPath": "C:\\Users\\Kenneth Malgas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.Admin\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Kenneth Malgas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "framework": "net8.0",
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.400"
+      },
+      "frameworks": {
+        "net8.0": {
+          "framework": "net8.0",
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.89, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[7.1.1, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[10.0.13, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.402/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.Auth\\NMBDHL.Auth.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.Auth\\NMBDHL.Auth.csproj",
+        "projectName": "NMBDHL.Auth",
+        "projectPath": "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.Auth\\NMBDHL.Auth.csproj",
+        "packagesPath": "C:\\Users\\Kenneth Malgas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.Auth\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Kenneth Malgas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "framework": "net8.0",
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.Admin\\NMBDHL.Admin.csproj": {
+                "projectPath": "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.Admin\\NMBDHL.Admin.csproj"
+              },
+              "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.DataAccess\\NMBDHL.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.DataAccess\\NMBDHL.DataAccess.csproj"
+              },
+              "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.Doctor\\NMBDHL.Doctor.csproj": {
+                "projectPath": "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.Doctor\\NMBDHL.Doctor.csproj"
+              },
+              "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.LabManager\\NMBDHL.LabManager.csproj": {
+                "projectPath": "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.LabManager\\NMBDHL.LabManager.csproj"
+              },
+              "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.LabTechnician\\NMBDHL.LabTechnician.csproj": {
+                "projectPath": "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.LabTechnician\\NMBDHL.LabTechnician.csproj"
+              },
+              "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.Patient\\NMBDHL.Patient.csproj": {
+                "projectPath": "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.Patient\\NMBDHL.Patient.csproj"
+              },
+              "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.Services\\NMBDHL.Services.csproj": {
+                "projectPath": "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.Services\\NMBDHL.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.400"
+      },
+      "frameworks": {
+        "net8.0": {
+          "framework": "net8.0",
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.89, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[7.1.1, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[10.0.13, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.402/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.DataAccess\\NMBDHL.DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.DataAccess\\NMBDHL.DataAccess.csproj",
+        "projectName": "NMBDHL.DataAccess",
+        "projectPath": "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.DataAccess\\NMBDHL.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\Kenneth Malgas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.DataAccess\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Kenneth Malgas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "framework": "net8.0",
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.400"
+      },
+      "frameworks": {
+        "net8.0": {
+          "framework": "net8.0",
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.89, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[7.1.1, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[10.0.13, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.402/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.Doctor\\NMBDHL.Doctor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.Doctor\\NMBDHL.Doctor.csproj",
+        "projectName": "NMBDHL.Doctor",
+        "projectPath": "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.Doctor\\NMBDHL.Doctor.csproj",
+        "packagesPath": "C:\\Users\\Kenneth Malgas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.Doctor\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Kenneth Malgas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "framework": "net8.0",
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.DataAccess\\NMBDHL.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.DataAccess\\NMBDHL.DataAccess.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.400"
+      },
+      "frameworks": {
+        "net8.0": {
+          "framework": "net8.0",
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.89, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[7.1.1, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[10.0.13, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.402/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.LabManager\\NMBDHL.LabManager.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.LabManager\\NMBDHL.LabManager.csproj",
+        "projectName": "NMBDHL.LabManager",
+        "projectPath": "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.LabManager\\NMBDHL.LabManager.csproj",
+        "packagesPath": "C:\\Users\\Kenneth Malgas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.LabManager\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Kenneth Malgas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "framework": "net8.0",
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.400"
+      },
+      "frameworks": {
+        "net8.0": {
+          "framework": "net8.0",
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.89, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[7.1.1, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[10.0.13, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.402/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.LabTechnician\\NMBDHL.LabTechnician.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.LabTechnician\\NMBDHL.LabTechnician.csproj",
+        "projectName": "NMBDHL.LabTechnician",
+        "projectPath": "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.LabTechnician\\NMBDHL.LabTechnician.csproj",
+        "packagesPath": "C:\\Users\\Kenneth Malgas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.LabTechnician\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Kenneth Malgas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "framework": "net8.0",
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.400"
+      },
+      "frameworks": {
+        "net8.0": {
+          "framework": "net8.0",
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.89, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.18.1, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[7.1.1, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[10.0.13, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.402/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.Patient\\NMBDHL.Patient.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.Patient\\NMBDHL.Patient.csproj",
+        "projectName": "NMBDHL.Patient",
+        "projectPath": "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.Patient\\NMBDHL.Patient.csproj",
+        "packagesPath": "C:\\Users\\Kenneth Malgas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.Patient\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Kenneth Malgas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "framework": "net8.0",
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.DataAccess\\NMBDHL.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.DataAccess\\NMBDHL.DataAccess.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.400"
+      },
+      "frameworks": {
+        "net8.0": {
+          "framework": "net8.0",
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.89, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[7.1.1, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[10.0.13, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.402/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.Services\\NMBDHL.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.Services\\NMBDHL.Services.csproj",
+        "projectName": "NMBDHL.Services",
+        "projectPath": "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.Services\\NMBDHL.Services.csproj",
+        "packagesPath": "C:\\Users\\Kenneth Malgas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Kenneth Malgas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "framework": "net8.0",
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.400"
+      },
+      "frameworks": {
+        "net8.0": {
+          "framework": "net8.0",
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.89, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[7.1.1, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[10.0.13, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.402/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\WebApplication2\\WebApplication2.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\WebApplication2\\WebApplication2.csproj",
+        "projectName": "WebApplication2",
+        "projectPath": "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\WebApplication2\\WebApplication2.csproj",
+        "packagesPath": "C:\\Users\\Kenneth Malgas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\WebApplication2\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Kenneth Malgas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "framework": "net8.0",
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.Auth\\NMBDHL.Auth.csproj": {
+                "projectPath": "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.Auth\\NMBDHL.Auth.csproj"
+              },
+              "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.DataAccess\\NMBDHL.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.DataAccess\\NMBDHL.DataAccess.csproj"
+              },
+              "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.Doctor\\NMBDHL.Doctor.csproj": {
+                "projectPath": "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.Doctor\\NMBDHL.Doctor.csproj"
+              },
+              "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.LabManager\\NMBDHL.LabManager.csproj": {
+                "projectPath": "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.LabManager\\NMBDHL.LabManager.csproj"
+              },
+              "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.LabTechnician\\NMBDHL.LabTechnician.csproj": {
+                "projectPath": "C:\\Users\\Kenneth Malgas\\Desktop\\GRP-04-14\\NMBDHL.LabTechnician\\NMBDHL.LabTechnician.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.400"
+      },
+      "frameworks": {
+        "net8.0": {
+          "framework": "net8.0",
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.89, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.18.1, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[7.1.1, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[10.0.13, )"
+            },
+            "Select.HtmlToPdf.NetCore": {
+              "target": "Package",
+              "version": "[26.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.402/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
